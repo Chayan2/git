@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # Initialize the tool with a specific YouTube channel handle
 youtube_channel_tool = YoutubeChannelSearchTool(
-    youtube_channel_handle='@chaiaurcode'
+    youtube_channel_handle='@chayan'
 )
 
 # Define an agent that uses the tool
