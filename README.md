@@ -1,0 +1,63 @@
+(.venv) PS C:\Users\Asus\Desktop\crewai> git branch -vv
+  dev              7ab7772 added dev dependencies
+  feature/LB-10002 3466d8d commit for LB-10001
+  master           04369ca first commit
+* staging          17e4e0b Merge branch 'master' of https://github.com/Chayan2/git into staging   
+(.venv) PS C:\Users\Asus\Desktop\crewai> git branch
+  dev
+  feature/LB-10002
+  master
+* staging
+(.venv) PS C:\Users\Asus\Desktop\crewai> git status
+On branch staging
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(.venv) PS C:\Users\Asus\Desktop\crewai> git checout dev
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+(.venv) PS C:\Users\Asus\Desktop\crewai> git checkout dev
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+(.venv) PS C:\Users\Asus\Desktop\crewai> git stash 
+Saved working directory and index state WIP on staging: 17e4e0b Merge branch 'master' of https://github.com/Chayan2/git into staging
+(.venv) PS C:\Users\Asus\Desktop\crewai> git checkout dev
+Switched to branch 'dev'
+(.venv) PS C:\Users\Asus\Desktop\crewai> git checkout staging
+Switched to branch 'staging'
+(.venv) PS C:\Users\Asus\Desktop\crewai> git stash list
+stash@{0}: WIP on staging: 17e4e0b Merge branch 'master' of https://github.com/Chayan2/git into staging
+(.venv) PS C:\Users\Asus\Desktop\crewai> git pop {0}
+git: 'pop' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+(.venv) PS C:\Users\Asus\Desktop\crewai> git pop stage@{0}
+git: 'pop' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+(.venv) PS C:\Users\Asus\Desktop\crewai> git stash pop stage@{0}
+error: unknown switch `e'
+usage: git stash pop [--index] [-q | --quiet] [<stash>]
+
+    -q, --[no-]quiet      be quiet, only report errors
+    --[no-]index          attempt to recreate the index
+
+(.venv) PS C:\Users\Asus\Desktop\crewai> git stash pop
+On branch staging
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (9bf2f2b99486090412bce72c767ac6f9910cbe73)
+(.venv) PS C:\Users\Asus\Desktop\crewai> 
